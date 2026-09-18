@@ -1,6 +1,10 @@
 import "./Card.css";
 
-export const card = ({ children }) => {
-    return <div>{children}</div>;
+export const Card = ({ children }) => {
+    return (
+        <div className="card">
+            <div className="card-content">{children}</div>
+        </div>
+    );
 
 }
