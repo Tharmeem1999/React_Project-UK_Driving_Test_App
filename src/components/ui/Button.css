@@ -26,3 +26,24 @@
     background-color: blue;
     color: white;
 }
+
+/* Teal/Turquoise Theme for Navigation Controls */
+.button.navigation-outline {
+    background-color: white;
+    color: teal;
+    border: 2px solid teal;
+}
+
+.button.navigation-outline:hover {
+    background-color: lightgreen;
+}
+
+.button.navigation-selected {
+    background-color: teal;
+    color: white;
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
