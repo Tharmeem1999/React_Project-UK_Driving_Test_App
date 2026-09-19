@@ -1,7 +1,7 @@
 import QuestionHeader from "./QuestionHeader";
 import { Card } from "./ui/Card";
 import QuestionText from "./QuestionText";
-import AnswerOption from "./AnswerOptions";
+import AnswerOptions from "./AnswerOptions";
 import MediaDisplay from "./MediaDisplay";
 import NavigationControls from "./NavigationControls";
 
@@ -14,6 +14,10 @@ const QuestionView = ({
     timeLeft,
     dispatch,
 }) => {
+    const onAnswer = (answerIndex) => {
+        dispatch({ type: "ANSWER", payload: answerIndex });
+    };
+
     return (
         <Card>
             <QuestionHeader
@@ -25,6 +29,11 @@ const QuestionView = ({
                 <div style={{ flex: 1 }}>
                     <QuestionText
                         text={q.question}
+                    />
+                    <AnswerOptions
+                        options={q.options}
+                        selectedIndex={selectAnswer}
+                        onSelect={onAnswer}
                     />
                 </div>
             </div>

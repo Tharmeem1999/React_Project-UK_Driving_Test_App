@@ -1,0 +1,28 @@
+.button {
+    padding: 12px 20px;
+    background-color: lightgray;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3;
+    margin: 0.5rem;
+    white-space: "pre-wrap";
+}
+
+/* If the button is not selected => Blue Theme (Outline) */
+.button.outline {
+    background-color: white;
+    color: blue;
+    border: 2px solid blue;
+}
+
+.button.outline:hover {
+    background-color: lightskyblue;
+}
+
+/* If the button is selected => Blue Theme (selected) */
+.button.selected {
+    background-color: blue;
+    color: white;
+}
